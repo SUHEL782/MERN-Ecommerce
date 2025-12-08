@@ -2,20 +2,20 @@
 
 A cloud-native, scalable, and secure e-commerce web application built using the MERN stack, fully containerized with Docker, deployed to AWS EKS using Kubernetes, and managed through a robust CI/CD pipeline with Jenkins and Infrastructure as Code (IaC) using Terraform.
 ---
-## 📊 Prometheus Architecture
+## Prometheus Architecture
 
 ![Prometheus Architecture](./prometheus-architecture.gif)
 
 -----
 # 🛠 Common Problems & Solutions
-#🐳 Docker
+# Docker
 Problem	Solution
 Container exits immediately	Ensure the main process runs in the foreground.
 Port binding errors	Check for conflicts using docker ps and free up ports.
 Can't connect between containers	Use Docker Compose with proper service names and networks.
 Large image size	Use multi-stage builds and Alpine-based images.
 ---
-# ☸️ Kubernetes
+#  Kubernetes
 Problem	Solution
 CrashLoopBackOff	Check container logs and probe configurations.
 ImagePullBackOff	Verify image name, tag, and Docker registry credentials.
@@ -23,56 +23,56 @@ Pending pods	Check node capacity or scheduling constraints.
 DNS issues	Ensure CoreDNS is running and correctly configured.
 Node Not Ready	Check EKS worker config, IAM roles, and node health.
 -----
-🔧 Terraform
+ Terraform
 Problem	Solution
 Resource exists already	Use terraform import or terraform state rm.
 Inconsistent state in team	Use remote backend with state locking (S3 + DynamoDB).
 terraform destroy deletes important infra	Use prevent_destroy = true on critical resources.
 -----
-🧪 Jenkins CI/CD
+Jenkins CI/CD
 Problem	Solution
 Docker commands fail	Ensure Jenkins agent has Docker installed and socket access.
 Webhooks not triggering	Verify GitHub webhook settings and Jenkins endpoint availability.
 Env variables missing	Set them in pipeline or Jenkins system config.
 ------
-#🧩 App-Level (React, Node, MongoDB)
+# App-Level (React, Node, MongoDB)
 Problem	Solution
 CORS errors	Enable cors in Express backend with correct origin.
 MongoDB connection fails	Ensure MongoDB is accessible via correct URI or service.
 JWT expires too soon	Extend expiry time and implement refresh tokens.
 React app not loading on refresh	Configure fallback routes for React Router.
 ------
-# 📊 Monitoring & Logging
+#  Monitoring & Logging
 Problem	Solution
 No data in Grafana	Ensure Prometheus is scraping the right targets.
 CloudWatch logs missing	Check FluentBit config and IAM permissions.
 Log clutter	Use log levels (info, warn, error) and structured logs.
 ---
-## 📊 Monitoring Stack
+##  Monitoring Stack
 
 ![Monitoring and Observability Stack](./Stack-Architech.gif)
 
 ---------
-# 🔐 Security & Networking
+#  Security & Networking
 Problem	Solution
 JWT easily decoded	Use strong secrets and rotate regularly.
 MongoDB exposed	Keep MongoDB behind internal services only.
 HTTPS not working	Configure cert-manager and Ingress properly.
 Secrets in code	Use Kubernetes Secrets or Sealed Secrets instead of plaintext.
 ----------
-## 🚀 Project Overview
+##  Project Overview
 
-- ✅ End-to-end CI/CD pipeline with **Jenkins & GitHub**
-- 🐳 Fully containerized **frontend/backend using Docker**
-- ☸️ **Kubernetes** deployment on **AWS EKS**
-- 🧰 Infrastructure provisioning with **Terraform**
-- 📊 Monitoring using **Prometheus & Grafana**
-- 📥 Centralized logging with **AWS CloudWatch**
-- 🔐 Secure login/signup with **JWT Authentication**
+-  End-to-end CI/CD pipeline with **Jenkins & GitHub**
+-  Fully containerized **frontend/backend using Docker**
+-  **Kubernetes** deployment on **AWS EKS**
+-  Infrastructure provisioning with **Terraform**
+-  Monitoring using **Prometheus & Grafana**
+-  Centralized logging with **AWS CloudWatch**
+-  Secure login/signup with **JWT Authentication**
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 | Category        | Technologies Used                                 |
 |----------------|----------------------------------------------------|
@@ -89,7 +89,7 @@ Secrets in code	Use Kubernetes Secrets or Sealed Secrets instead of plaintext.
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 .
 ├── frontend/ # React frontend
@@ -107,7 +107,7 @@ Edit
 
 ---
 
-## ⚙️ CI/CD Pipeline
+##  CI/CD Pipeline
 
 - **Source Control:** GitHub  
 - **CI/CD Tool:** Jenkins
@@ -120,7 +120,7 @@ Edit
 
 ---
 
-## ☁️ Infrastructure Provisioning with Terraform
+##  Infrastructure Provisioning with Terraform
 
 Provision infrastructure components:
 
@@ -139,7 +139,7 @@ IAM roles and policies
 
 Elastic Load Balancer
 ----
-#☸️ Kubernetes Deployment
+# Kubernetes Deployment
 Apply K8s manifests:
 
 bash
@@ -149,7 +149,7 @@ cd k8s/
 kubectl apply -f mongo-deployment.yaml
 kubectl apply -f backend-deployment.yaml
 kubectl apply -f frontend-deployment.yaml
-📊 Monitoring & Logging
+ Monitoring & Logging
 Tool	Purpose
 Prometheus	Scrapes metrics from Kubernetes
 Grafana	Visualizes application metrics
@@ -165,7 +165,7 @@ Pod health
 
 Replica counts
 
-🔐 Security
+ Security
 JWT-based authentication with Bcrypt-hashed passwords
 
 Environment secrets stored using Kubernetes Secrets
@@ -174,7 +174,7 @@ Security groups, IAM roles, and VPC for network isolation
 
 Plans for enabling HTTPS using Ingress and cert-manager
 
-🧠 Future Enhancements
+ Future Enhancements
 Convert manifests to Helm Charts
 
 Enable HTTPS with Ingress + cert-manager
@@ -189,7 +189,7 @@ Integrate tests into CI/CD
 
 Add architecture diagrams using Mermaid or draw.io
 
-🧪 Local Development
+ Local Development
 Run locally using Docker Compose:
 
 bash
@@ -198,7 +198,7 @@ Edit
 git clone https://github.com/SUHEL782/application.com.git
 cd application.com
 docker-compose up --build
-🧰 Container Best Practices
+ Container Best Practices
 Use Liveness/Readiness Probes in Kubernetes
 
 Enable restartPolicy: Always for resilience
@@ -211,13 +211,13 @@ Watch resource usage to avoid memory leaks
 
 
 
-🤝 Contributing
+ Contributing
 Contributions are welcome! Fork the repo, create a feature branch, and submit a PR.
 ------
 
-👨‍💻 Author
+ Author
 Suhel Khan
-📍 Uttar Pradesh, Lucknow
+Uttar Pradesh, Lucknow
 📧 workwithsuhel@gmail.com
 📞 +91 8931004042
 🌐 https://workwithsuhel.netlify.app
