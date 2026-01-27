@@ -1,4 +1,4 @@
-# 🛒 MERN E-Commerce Application with DevOps on AWS
+#  MERN E-Commerce Application with DevOps on AWS
 
 A **production-ready e-commerce web application** built using the **MERN stack**, fully containerized with **Docker**, deployed on **AWS EKS (Kubernetes)**, and automated through a **CI/CD pipeline using Jenkins and Terraform (Infrastructure as Code)**.
 
@@ -6,7 +6,7 @@ This project demonstrates **end-to-end DevOps ownership**, covering application 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - Full-stack MERN application (React, Node.js, Express, MongoDB)
 - Dockerized frontend and backend services
@@ -19,7 +19,7 @@ This project demonstrates **end-to-end DevOps ownership**, covering application 
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |--------|-------------|
@@ -37,7 +37,7 @@ This project demonstrates **end-to-end DevOps ownership**, covering application 
 
 ---
 
-## 🔄 CI/CD Pipeline (Jenkins)
+##  CI/CD Pipeline (Jenkins)
 
 1. Code is pushed to GitHub.
 2. Jenkins pipeline is triggered via webhook.
@@ -50,7 +50,7 @@ This project demonstrates **end-to-end DevOps ownership**, covering application 
 
 ---
 
-## ☁️ Infrastructure Provisioning (Terraform)
+##  Infrastructure Provisioning (Terraform)
 
 Infrastructure is provisioned using Terraform:
 
@@ -64,7 +64,7 @@ Infrastructure is provisioned using Terraform:
 cd terraform
 terraform init
 terraform apply
-☸️ Kubernetes Deployment
+ Kubernetes Deployment
 cd k8s
 kubectl apply -f mongo-deployment.yaml
 kubectl apply -f backend-deployment.yaml
@@ -79,7 +79,7 @@ Internal service networking
 
 Restart policies for resilience
 
-📊 Monitoring & Logging
+Monitoring & Logging
 Tool	Purpose
 Prometheus	Metrics collection
 Grafana	Metrics visualization
@@ -94,7 +94,7 @@ Request latency
 
 Replica scaling
 
-🔐 Security
+ Security
 JWT-based authentication
 
 Password hashing using Bcrypt
@@ -105,13 +105,13 @@ MongoDB accessible only as an internal service
 
 IAM roles, security groups, and VPC network isolation
 
-🧪 Local Development
+ Local Development
 Run the application locally using Docker Compose:
 
 git clone https://github.com/SUHEL782/application.com.git
 cd application.com
 docker-compose up --build
-🔮 Future Enhancements
+ Future Enhancements
 Convert Kubernetes manifests into Helm charts
 
 Enable HTTPS using Ingress and cert-manager
