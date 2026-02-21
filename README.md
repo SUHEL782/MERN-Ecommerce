@@ -48,7 +48,7 @@ This project demonstrates **end-to-end DevOps ownership**, covering application 
 ✔ Fully automated build and deployment  
 ✔ Zero manual deployment steps
 
----
+-----
 
 ##  Infrastructure Provisioning (Terraform)
 
