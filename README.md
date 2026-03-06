@@ -3,7 +3,8 @@
 A **production-ready e-commerce web application** built using the **MERN stack**, fully containerized with **Docker**, deployed on **AWS EKS (Kubernetes)**, and automated through a **CI/CD pipeline using Jenkins and Terraform (Infrastructure as Code)**.
 
 This project demonstrates **end-to-end DevOps ownership**, covering application development, cloud infrastructure provisioning, automated deployments, monitoring, logging, and security.
-
+---
+![Architecture Diagram](https://github.com/SUHEL782/MERN-Ecommerce/blob/main/Architecture.png)
 ---
 
 ## Key Features
