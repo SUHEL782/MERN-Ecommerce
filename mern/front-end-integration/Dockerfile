@@ -1,23 +1,22 @@
-# Use Node.js 20 (Required by react-router@7.1.5)
-FROM node:20-alpine  
+# ---------- Stage 1: Build React App ----------
+FROM node:20-alpine AS builder
 
-# Set working directory
-WORKDIR /app                          
+WORKDIR /app
 
-# Copy package.json and install dependencies
 COPY package*.json ./
-RUN npm install --omit=dev  # Reduce image size by skipping dev dependencies
 
-# Copy the rest of the application
+RUN npm install
+
 COPY . .
 
+RUN npm run build
 
 
-# Expose the correct port
-EXPOSE 3000
+# ---------- Stage 2: Production Server ----------
+FROM nginx:alpine
 
-# Ensure React is accessible externally
-ENV HOST=0.0.0.0
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Start the app
-CMD ["npm", "start"]
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
